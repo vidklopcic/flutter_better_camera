@@ -564,6 +564,7 @@ public class Camera {
       }
 
       captureBuilder.set(CaptureRequest.JPEG_ORIENTATION, getMediaOrientation());
+      captureBuilder.set(CaptureRequest.SCALER_CROP_REGION, mPreviewRequestBuilder.get(CaptureRequest.SCALER_CROP_REGION));
 
 
       mCaptureSession.capture(
